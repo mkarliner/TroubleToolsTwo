@@ -1,0 +1,15 @@
+<template name="Room">
+	
+	<div >
+		<div id="left-pane">
+			{{> roomSection currentSection}}
+		</div>
+		<div id="right-pane">
+			{{> roomMessages this}}
+		</div>
+		</div>
+</template>
+
+<template name="userPill">
+    <span class="label {{labelClass}}">{{username}}</span>
+</template>

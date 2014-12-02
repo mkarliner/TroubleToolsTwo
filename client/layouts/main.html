@@ -1,0 +1,22 @@
+<template name="MainLayout">
+
+  <header>
+    <h1>{{title}}</h1>
+  </header>
+	
+		{{> nav }}
+
+  <aside>
+    {{> yield "aside"}}
+  </aside>
+
+  <article>
+    {{> yield}}
+  </article>
+
+  <footer>
+    {{> yield "footer"}}
+  </footer>
+  
+  
+</template>

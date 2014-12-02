@@ -1,0 +1,75 @@
+/* CSS declarations go here */
+.item {
+  display: block;
+  padding: 5px;
+  margin: 5px;
+  background-color: #ccc;
+  border: 1px solid #aaa;
+  width: 200px;
+  cursor: move;
+}
+
+
+.camera-popup video {
+   max-width:250px;
+}
+
+#pic {
+	margin-left: auto;
+	margin-right: auto;
+	width: 80%;
+	max-width: 300px;
+}
+
+img {
+	max-width: 300px;
+	max-height: 200px;
+}
+
+.forward-arrow-btn {
+	float: right;
+}
+
+.list-right {
+	float: right;
+}
+
+#room-title {
+
+
+}
+#room-buttons {
+
+	display: inline;
+	float: right;
+}
+#room-header {
+
+	float: clear;
+	display: block;
+}
+
+.main-nav-btn {
+	#background: lightblue;
+}
+
+#left-pane {
+	width: 50%;
+	display: block;
+	float: left;
+}
+
+#right-pane {
+	width: 50%;
+	display: block;
+	float: left;
+}
+
+.message-form {
+	display: block;
+	float: left;
+}
+.section {
+	
+}
+

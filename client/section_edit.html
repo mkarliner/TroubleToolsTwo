@@ -1,0 +1,13 @@
+<template name="SectionEdit">
+	<div>
+		{{#quickRemoveButton collection="Categories" _id=this._id onError=onError onSuccess=onSuccess beforeRemove=beforeRemove class="btn btn-danger"}}
+			<span class="glyphicon glyphicon-trash btn-lg" aria-hidden="true"></span>
+		{{/quickRemoveButton}}
+		<button id={{this._id}} style="float: right" class="glyphicon glyphicon-camera btn-lg camera" aria-hidden="true"></button >
+		{{> updateCategoryForm}}
+	
+		<div>
+			<img src="{{image}}"/>
+		</div>
+		</div>
+</template>

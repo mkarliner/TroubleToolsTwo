@@ -1,0 +1,12 @@
+<template name="insertMessadgeForm">
+  {{> quickForm collection="Messages" id="insertMesdsageForm" type="insert" buttonClasses="glyphicon glyphicon-send btn btn-default" buttonContent=" " omitFields="who, room"}}
+</template>
+
+
+<template name="insertMessageForm">
+  {{#autoForm collection="Messages" id="insertMessageForm" type="insert"}}
+      {{> afQuickField name='body' class="message-form" }}
+
+    <button  type="submit" class=" glyphicon glyphicon-send btn btn-primary"></button>
+  {{/autoForm}}
+</template>

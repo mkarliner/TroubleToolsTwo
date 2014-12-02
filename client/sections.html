@@ -1,0 +1,98 @@
+
+<template name="Sections">
+	{{#with currentCategory}}
+	<div class="section well">
+	<ol class="breadcrumb">
+		<li class="up" id="home">Home</li>
+	{{#each breadcrumbs}}
+	  	<li class="up" id="{{this._id}}">{{name}}</li>
+	 {{/each}}
+	 {{#if notInRoom}}
+  	<button id="send-to-room" type="button" class="btn btn-default"  aria-expanded="true" aria-controls="demo">
+  		<span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span>
+  	</button>
+	{{/if}}
+ 	<button type="button" class="btn btn-default list-right" data-toggle="collapse" data-target="#demo" aria-expanded="true" aria-controls="demo">
+ 		<span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+ 	</button>
+	</ol>
+<!-- <div>
+	<span class="glyphicon glyphicon-home home" aria-hidden="true"></span>
+	<span class="up" id="{{currentCategory.parent}}">{{currentCategory.name}}</span>
+	<button type="button" class="btn btn-default" data-toggle="collapse" data-target="#demo" aria-expanded="true" aria-controls="demo">
+		<span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+	</button>
+</div> -->
+
+
+<div id="arrows">
+	{{#if previous}}
+	<button class="btn backward-arrow-btn" id={{previous._id}}>
+			<span class="glyphicon glyphicon-step-backward" aria-hidden="true"></span>
+	</button>
+	{{/if}}
+	{{#if next}}
+	<button class="btn forward-arrow-btn" id="{{next._id}}">
+			<span class="glyphicon glyphicon-step-forward" aria-hidden="true"></span>
+	</button>
+	{{/if}}
+</div>
+<div class="list-right">
+	<span class="btn">
+		<a href="/sections/edit/{{_id}}">
+		
+			<span class="glyphicon glyphicon-edit edit-section" aria-hidden="true"></span>
+		</a>
+	</span>
+</div>
+{{#if empty}}
+	<div id="emptysection">
+		No content yet
+	</div>
+{{/if}}
+
+<div id="pic">
+	<img src="{{image}}" width="80%">
+</div>
+	
+<div id="bd">
+	{{body}}
+</div>
+	
+
+
+
+<ul class="list-group steps sorted_list" id="steplist">
+	{{#each sections}}
+		<li  class="list-group-item section-title " id="{{_id}}">
+			{{name}} {{rank}}
+			<span id="name" class="list-right">
+				<span class="glyphicon glyphicon-move handle" aria-hidden="true"></span>
+				<span class="btn">
+					<a href="/sections/edit/{{_id}}">
+					
+						<span class="glyphicon glyphicon-edit edit-section" aria-hidden="true"></span>
+					</a>
+				</span>
+				<!-- <span class="btn">
+					<a href="/sections/{{_id}}">
+						<span class="glyphicon glyphicon-eye-open edit-section" aria-hidden="true"></span>
+					</a>
+				</span>  -->
+			</span>
+		</li>
+	{{/each}}
+</ul>
+
+
+
+	
+<div id="demo" class="collapse">
+			{{> insertCategoryForm }}
+</div>
+
+</div>
+{{/with}}
+</template>
+
+

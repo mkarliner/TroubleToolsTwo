@@ -1,0 +1,40 @@
+<template name="roomMessages">
+	<div class="well">
+		
+
+
+		<div class="title">
+			<div id="room-title">
+			{{title}}
+			</div>
+		</div>
+		<div id="secondline">
+	 		<div  id="room-buttons">
+	 			{{#quickRemoveButton collection="Rooms" _id=this._id onError=onError onSuccess=onSuccess beforeRemove=beforeRemove class="btn btn-danger"}}
+	 				<span class="glyphicon glyphicon-trash btn" aria-hidden="true"></span>
+	 			{{/quickRemoveButton}}
+	 		</div>
+		 	<div id="room-header">
+			In this room:
+			{{#each currMembers}}
+			  	{{> userPill this}}
+			 {{/each}}
+
+		 	</div>
+		</div>
+
+
+	<div class="well">
+		{{> insertMessageForm}}
+	</div>
+	<div>
+		<ul class="list-group">
+		{{#each messages}}
+			<li class="list-group-item">
+				{{username this}}: {{body}}
+			</li>
+		{{/each}}
+		</ul>
+	</div>
+	</div>
+</template>

@@ -1,0 +1,8 @@
+<template name="insertRoomForm">
+  {{> quickForm collection="Rooms" id="insertRoomForm" type="insert" buttonClasses="glyphicon glyphicon-ok btn btn-default" buttonContent=" " omitFields="members, currentSection"}}
+</template>
+
+
+<template name="updateRoomForm">
+  {{> quickForm collection="Categories" id="updateCategoryForm" type="update" doc=this buttonClasses="glyphicon glyphicon-ok btn btn-default" buttonContent=" " omitFields="memebers" }}
+</template>

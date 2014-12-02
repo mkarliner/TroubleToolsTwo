@@ -1,0 +1,22 @@
+# Meteor packages used by this project, one per line.
+#
+# 'meteor add' and 'meteor remove' will edit this file for you,
+# but you can also edit it by hand.
+
+meteor-platform
+autopublish
+insecure
+iron:router
+accounts-base
+accounts-password
+accounts-ui-unstyled
+aldeed:autoform
+aldeed:collection2
+mizzao:bootstrap-3
+jquery
+mdg:camera
+mrt:jquery-ui
+dsyko:jquery-ui-touch-punch
+aldeed:delete-button
+mizzao:user-status
+mrt:mongo-counter
