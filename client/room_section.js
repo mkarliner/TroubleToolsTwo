@@ -10,7 +10,7 @@ Template.roomSection.helpers({
 	// 	}
 	// },
 	section: function() {
-		console.log("SEC",this);
+		//console.log("SEC",this);
 		return this;
 	},
 	messages: function() {

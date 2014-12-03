@@ -66,8 +66,14 @@ img {
 }
 
 .message-form {
-	display: block;
+	width: 50%;
+	display: inline;
 	float: left;
+}
+
+.message-button {
+	display: inline;
+	float: right;
 }
 .section {
 	

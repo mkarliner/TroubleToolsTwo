@@ -1,9 +1,9 @@
 Template.Sections.helpers({
 	currentCategory: function() {
-		console.log("SECS: ", this);
+		//console.log("SECS: ", this);
 		if(this.data) {
 			this.data.inRoom = true;
-			console.log("AFTER: ", this);
+			// console.log(" AFTER: ", this);
 			return this.data;
 		} else {
 			category = Categories.findOne(Session.get("currentCategory"));
@@ -35,7 +35,7 @@ Template.Sections.helpers({
 		return breadcrumbs.reverse();
 	},
 	notInRoom: function(){
-		console.log("INROOM ", this);
+		//console.log("INROOM ", this);
 		if(this.inRoom){
 			return false;
 		} else {
@@ -82,7 +82,7 @@ Template.Sections.helpers({
 	previous: function() {
 		category = this;
 		prev =  Categories.find({parent: category.parent, rank: {$lt: category.rank}}, {sort: {rank: -1}}).fetch()[0];
-		console.log("PREV", prev);
+		//console.log("PREV", prev);
 		return prev;
 	}
 });

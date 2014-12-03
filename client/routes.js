@@ -70,6 +70,7 @@ Router.route('/rooms/:id', function() {
 				_id: this.params.id
 			});
 			 Session.set("currentRoom", room._id);
+			 Session.set("currentCategory", room.currentSection);
 			 Session.set("title", "Room: " + room.name);
 			 res = Rooms.update({_id: room._id}, {$addToSet: {members: Meteor.userId() }});
 			 // console.log("RES", res);

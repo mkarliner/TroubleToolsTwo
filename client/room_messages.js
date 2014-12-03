@@ -1,7 +1,7 @@
 Template.roomMessages.helpers({
 	messages: function() {
-		messages = Messages.find({room: this._id});
-		// console.log("MSGS ", messages);
+		messages = Messages.find({room: this._id}).fetch().reverse();
+		console.log("MSGS ", messages);
 		return messages;
 	},
 	currMembers: function(){

@@ -1,7 +1,7 @@
 Template.Room.helpers({
 	currentSection: function() {
 		cat = Categories.findOne(this.currentSection);
-		console.log("CSR ", this, cat);
+		//console.log("CSR ", this, cat);
 		return cat;
 	},
 	beforeRemove: function() {

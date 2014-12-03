@@ -1,12 +1,30 @@
 <template name="insertMessadgeForm">
-  {{> quickForm collection="Messages" id="insertMesdsageForm" type="insert" buttonClasses="glyphicon glyphicon-send btn btn-default" buttonContent=" " omitFields="who, room"}}
+  {{> quickForm collection="Messages" id="insertMessageForm" type="insert" template="messagetext"  buttonClasses="glyphicon glyphicon-send btn btn-default" buttonContent=" " omitFields="who, room"}}
 </template>
 
 
 <template name="insertMessageForm">
-  {{#autoForm collection="Messages" id="insertMessageForm" type="insert"}}
+  {{#autoForm collection="Messages" id="insertMessageForm" template="messagetext" type="insert"}}
       {{> afQuickField name='body' class="message-form" }}
-
-    <button  type="submit" class=" glyphicon glyphicon-send btn btn-primary"></button>
+    
   {{/autoForm}}
+</template>
+
+
+<template name="quickForm_messagetext">
+	<SCRIPT LANGUAGE="javascript">
+	function send()
+	{
+		document.getElementById("insertMessageForm").submit();
+		console.log("Hsdaf")
+	}
+	</SCRIPT>
+
+	<FORM NAME="insertMessageForm" id="insertMessageForm" novalidate="novalidate">
+
+	<b>Submit your Name:</b>
+	<input type="text" name="body" data-schema-key="body" class="form-control" >
+
+
+	</FORM>
 </template>
