@@ -9,7 +9,6 @@ insecure
 iron:router
 accounts-base
 accounts-password
-accounts-ui-unstyled
 aldeed:autoform
 aldeed:collection2
 mizzao:bootstrap-3
@@ -23,3 +22,4 @@ mrt:mongo-counter
 cfs:autoform
 cfs:gridfs
 cfs:standard-packages
+steeve:single-page-login

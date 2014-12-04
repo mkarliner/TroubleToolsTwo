@@ -4,14 +4,15 @@ Router.configure({
 
 
 Router.onBeforeAction(function() {
-	if (!Meteor.user()) {
-		// if the user is not logged in, render the Login template
-		// this.layout('LoginLayout');
-		this.layout("LoginLayout");
-		this.render('Login');
-	} else {
-		this.next();
-	}
+	// if (!Meteor.user()) {
+	// 	// if the user is not logged in, render the Login template
+	// 	// this.layout('LoginLayout');
+	// 	this.layout("LoginLayout");
+	// 	this.render('Login');
+	// } else {
+	// 	this.next();
+	// }
+	this.next();
 });
 
 
@@ -24,10 +25,10 @@ Router.route('/', function() {
 	this.render('Start');
 });
 
-Router.route('/logout', function() {
-	Meteor.logout();
-	Router.go("/");
-});
+// Router.route('/logout', function() {
+// 	Meteor.logout();
+// 	Router.go("/");
+// });
 
 Router.route('/sections/edit/:id', function() {
 	this.render('SectionEdit', {
