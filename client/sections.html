@@ -51,9 +51,9 @@
 	</div>
 {{/if}}
 
-<div id="pic">
-	<img src="{{image}}" width="80%">
-</div>
+		{{#if fileId}}
+		<div class="listitem_image"><a href="/{{file}}"><img src="{{image fileId}}" width="50%"/></a></div>
+		{{/if}}
 	
 <div id="bd">
 	{{body}}

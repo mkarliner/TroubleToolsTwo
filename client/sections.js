@@ -50,6 +50,14 @@ Template.Sections.helpers({
 		}
 		
 	},
+	image: function(fileId) {
+		console.log("Trying to find image", fileId);
+		image = Images.findOne({_id: fileId});
+		if (typeof image != 'undefined') {
+			return 	image.url();	
+		}
+		
+	},
 	sections: function() {
 		category = Categories.findOne(Session.get("currentCategory"));
 		
@@ -66,7 +74,7 @@ Template.Sections.helpers({
 		} else {
 			console.log("at top level");
 			sections = Categories.find({
-				parent: null
+				parent: "home"
 			});
 		}
 

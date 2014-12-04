@@ -3,7 +3,10 @@ AutoForm.hooks({
 		before: {
 			insert: function(doc, template) {
 				doc.parent = Session.get("currentCategory");
-				doc.rank = Meteor.call("incrementRank");
+				Meteor.call("incrementRank", function(error, result){
+					console.log("Rank returned ", result);
+					doc.rank = result;
+				});
 				console.log("Cat insert", doc);
 				return doc;
 			}
@@ -13,8 +16,8 @@ AutoForm.hooks({
 	updateCategoryForm: {
 		onSuccess: function(op, res, template) {
 			console.log("After update", op, template.data.doc.parent, template);
-			Session.set("currentCategory", template.data.doc.parent);
-			Router.go("/sections/" + template.data.doc._id);
+			Session.set("currentCategory", template.data.doc._id);
+			Router.go("/sections");
 		}
 	},
 	insertMessageForm: {
@@ -22,7 +25,7 @@ AutoForm.hooks({
 			insert: function(doc, template) {
 				doc.room = Session.get("currentRoom");
 				doc.who = Meteor.userId();
-				console.log("Cat insert", doc);
+				console.log("Msg insert", doc);
 				return doc;
 			}
 		},

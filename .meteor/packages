@@ -20,3 +20,6 @@ dsyko:jquery-ui-touch-punch
 aldeed:delete-button
 mizzao:user-status
 mrt:mongo-counter
+cfs:autoform
+cfs:gridfs
+cfs:standard-packages

@@ -1,11 +1,11 @@
 <template name="insertCategoryForm">
 	<div class="well">
-  	  {{> quickForm collection="Categories" id="insertCategoryForm" type="insert" buttonClasses="glyphicon glyphicon-ok btn btn-default" buttonContent=" " omitFields="parent, body, image, rank"}}
+  	  {{> quickForm collection="Categories" id="insertCategoryForm" type="insert" buttonClasses="glyphicon glyphicon-ok btn btn-default" buttonContent=" " omitFields="parent, body, rank"}}
   	</div>
 </template>
 
 
 
 <template name="updateCategoryForm">
-  {{> quickForm collection="Categories" id="updateCategoryForm" type="update" doc=this buttonClasses="glyphicon glyphicon-ok btn btn-default" buttonContent=" " omitFields="parent, image, rank  " }}
+  {{> quickForm collection="Categories" id="updateCategoryForm" type="update" doc=this buttonClasses="glyphicon glyphicon-ok btn btn-default" buttonContent=" " omitFields="parent, fileId, rank  " }}
 </template>

@@ -87,3 +87,7 @@ Router.route('/rooms', function() {
 	});
 });
 
+Router.route("/help", function(){
+	this.render('Help');
+});
+

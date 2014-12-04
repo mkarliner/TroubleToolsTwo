@@ -16,15 +16,19 @@ Schemas.Category = new SimpleSchema({
 			rows: 5
 		}
 	},
-	image: {
+	fileId: {
 		type: String,
-		optional: true
+		label: "Image",
+		optional: true,
+		autoform: {
+			type: "cfs-file",
+			collection: "images"
+		}
 	},
 	rank: {
 		type: Number,
 		optional: true,
-		decimal: true,
-		defaultValue: 99
+		decimal: true
 	},
 	parent: {
 		type: String,
